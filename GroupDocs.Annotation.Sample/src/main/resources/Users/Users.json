@@ -1,0 +1,1 @@
+[{"Id":"42b16a88-bb66-4e14-82fb-6f166d717980","Login":"admin","Name":"Admin","Password":"admin","Roles":["Admin"]},{"Id":"00000000-0000-0000-0000-000000000002","Login":"User","Name":"User","Password":null,"Roles":["User"]},{"Id":"00000000-0000-0000-0000-000000000001","Login":"Guest","Name":"Guest","Password":null,"Roles":["Guest"]}]
