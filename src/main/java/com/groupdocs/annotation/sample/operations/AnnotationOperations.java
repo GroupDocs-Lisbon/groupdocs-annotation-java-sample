@@ -225,7 +225,7 @@ public class AnnotationOperations {
         GetAnnotationResult annotation = annotator.getAnnotation(listAnnotationsResult.getAnnotations()[0].getGuid());
 
         // Delete annotation
-        DeleteAnnotationResult deleteAnnotationResult = annotator.deleteAnnotation(annotation.getId(), documentId);
+        DeleteAnnotationResult deleteAnnotationResult = annotator.deleteAnnotation(annotation.getId());
 
         //Delete all annotations
         annotator.deleteAnnotations(documentId);
