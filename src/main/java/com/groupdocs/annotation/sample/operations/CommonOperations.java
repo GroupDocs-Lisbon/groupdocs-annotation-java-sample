@@ -1,11 +1,12 @@
 package com.groupdocs.annotation.sample.operations;
 
-import com.aspose.ms.System.IO.Directory;
 import com.groupdocs.annotation.domain.AnnotationReviewerRights;
 import com.groupdocs.annotation.domain.config.AnnotationConfig;
 import com.groupdocs.annotation.handler.AnnotationImageHandler;
 import com.groupdocs.annotation.handler.input.IDocumentDataHandler;
 import com.groupdocs.annotation.sample.Utilities;
+
+import java.io.File;
 
 /**
  * The type View generator.
@@ -19,8 +20,9 @@ public class CommonOperations {
         cfg.setStoragePath(storageFolder);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
         IDocumentDataHandler documentRepository = annotator.getDocumentDataHandler();
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
         // Create document data object in storage.
         long documentId = annotator.createDocument(documentName);
@@ -36,9 +38,9 @@ public class CommonOperations {
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
         IDocumentDataHandler documentRepository = annotator.getDocumentDataHandler();
-        if(!Directory.exists(cfg.getStoragePath()))
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
         {
-            Directory.createDirectory(cfg.getStoragePath());
+            System.out.println("Can't create directory!");
         }
 
         // Create document data object in storage.

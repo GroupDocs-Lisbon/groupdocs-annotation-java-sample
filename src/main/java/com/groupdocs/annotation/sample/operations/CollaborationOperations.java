@@ -1,6 +1,5 @@
 package com.groupdocs.annotation.sample.operations;
 
-import com.aspose.ms.System.IO.Directory;
 import com.groupdocs.annotation.common.exception.AnnotatorException;
 import com.groupdocs.annotation.domain.*;
 import com.groupdocs.annotation.domain.config.AnnotationConfig;
@@ -13,6 +12,8 @@ import com.groupdocs.annotation.handler.input.IUserDataHandler;
 import com.groupdocs.annotation.handler.input.dataobjects.Document;
 import com.groupdocs.annotation.handler.input.dataobjects.User;
 import com.groupdocs.annotation.sample.Utilities;
+
+import java.io.File;
 
 /**
  * @author Aleksey Permyakov (13.09.2016)
@@ -28,9 +29,9 @@ public class CollaborationOperations {
         IUserDataHandler userRepository = annotator.getUserDataHandler();
         IDocumentDataHandler documentRepository = annotator.getDocumentDataHandler();
 
-        if(!Directory.exists(cfg.getStoragePath()))
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
         {
-            Directory.createDirectory(cfg.getStoragePath());
+            System.out.println("Can't create directory!");
         }
 
         // Create owner.
@@ -100,9 +101,9 @@ public class CollaborationOperations {
         IDocumentDataHandler documentRepository = annotator.getDocumentDataHandler();
 
         // Create storage folder
-        if(!Directory.exists(cfg.getStoragePath()))
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
         {
-            Directory.createDirectory(cfg.getStoragePath());
+            System.out.println("Can't create directory!");
         }
 
         // Create owner.

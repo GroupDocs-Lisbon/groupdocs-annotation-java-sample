@@ -1,6 +1,5 @@
 package com.groupdocs.annotation.sample.operations;
 
-import com.aspose.email.system.io.FileStream;
 import com.groupdocs.annotation.domain.PageData;
 import com.groupdocs.annotation.domain.RowData;
 import com.groupdocs.annotation.domain.config.AnnotationConfig;
@@ -8,7 +7,6 @@ import com.groupdocs.annotation.domain.containers.DocumentInfoContainer;
 import com.groupdocs.annotation.domain.image.PageImage;
 import com.groupdocs.annotation.domain.options.ImageOptions;
 import com.groupdocs.annotation.handler.AnnotationImageHandler;
-import com.groupdocs.annotation.handler.input.dataobjects.Document;
 import com.groupdocs.annotation.sample.Utilities;
 import org.apache.commons.io.IOUtils;
 

@@ -1,6 +1,5 @@
 package com.groupdocs.annotation.sample.operations;
 
-import com.aspose.ms.System.IO.Directory;
 import com.groupdocs.annotation.domain.*;
 import com.groupdocs.annotation.domain.config.AnnotationConfig;
 import com.groupdocs.annotation.handler.AnnotationImageHandler;
@@ -26,8 +25,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -59,8 +59,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -112,8 +113,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -145,8 +147,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -180,8 +183,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -216,8 +220,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -252,8 +257,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -289,8 +295,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -325,8 +332,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -362,8 +370,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -396,8 +405,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -431,8 +441,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);
@@ -466,8 +477,9 @@ public class AnnotateOperations {
 
         annotator.getDocumentDataHandler();
 
-        if (!Directory.exists(cfg.getStoragePath())) {
-            Directory.createDirectory(cfg.getStoragePath());
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
+        {
+            System.out.println("Can't create directory!");
         }
 
         InputStream cleanPdf = new FileInputStream(storagePath + File.separator + fileName);

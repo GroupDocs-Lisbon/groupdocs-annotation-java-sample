@@ -1,6 +1,5 @@
 package com.groupdocs.annotation.sample.operations;
 
-import com.aspose.ms.System.IO.Directory;
 import com.groupdocs.annotation.domain.AnnotationInfo;
 import com.groupdocs.annotation.domain.AnnotationType;
 import com.groupdocs.annotation.domain.Point;
@@ -11,6 +10,8 @@ import com.groupdocs.annotation.handler.AnnotationImageHandler;
 import com.groupdocs.annotation.handler.input.IDocumentDataHandler;
 import com.groupdocs.annotation.handler.input.dataobjects.Document;
 import com.groupdocs.annotation.sample.Utilities;
+
+import java.io.File;
 
 /**
  * @author Aleksey Permyakov (13.09.2016)
@@ -24,9 +25,9 @@ public class ReplyOperations {
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
         IDocumentDataHandler documentRepository = annotator.getDocumentDataHandler();
 
-        if(!Directory.exists(cfg.getStoragePath()))
+        if(!new File(cfg.getStoragePath()).exists() && !new File(cfg.getStoragePath()).mkdirs())
         {
-            Directory.createDirectory(cfg.getStoragePath());
+            System.out.println("Can't create directory!");
         }
         // Create document data object in storage
         final Document document = documentRepository.getDocument(fileName);
