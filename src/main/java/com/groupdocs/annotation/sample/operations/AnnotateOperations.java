@@ -16,10 +16,10 @@ import java.util.List;
  */
 public class AnnotateOperations {
 
-    public static void creatingTextAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingTextAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
 
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -51,9 +51,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingAreaAnnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingAreaAnnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -105,9 +105,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingPointAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingPointAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -139,9 +139,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingStrikeoutAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingStrikeoutAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -175,9 +175,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingPolylineAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingPolylineAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -212,9 +212,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingTextFieldAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingTextFieldAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -249,9 +249,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingWatermarkAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingWatermarkAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -287,9 +287,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingTextReplacementAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingTextReplacementAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -324,9 +324,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingArrowAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingArrowAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -362,9 +362,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingTextRedactionAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingTextRedactionAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -397,9 +397,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingResourceRedactionAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingResourceRedactionAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -433,9 +433,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingUnderlineAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingUnderlineAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -469,9 +469,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void creatingDistanceAnnotation(String storagePath, String fileName) throws Exception {
+    public static void creatingDistanceAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -508,9 +508,9 @@ public class AnnotateOperations {
         IOUtils.copy(result, fileStream);
     }
 
-    public static void addingAnnotationsToSlidesDocument(String storagePath, String fileName) throws Exception {
+    public static void addingAnnotationsToSlidesDocument(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -531,9 +531,9 @@ public class AnnotateOperations {
         IOUtils.copy(resultStream, new FileOutputStream(Utilities.OUTPUT_PATH + File.separator + "slides-annotated.pptx"));
     }
 
-    public static void addingAnnotationsToCellsDocument(String storagePath, String fileName) throws Exception {
+    public static void addingAnnotationsToCellsDocument(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -555,8 +555,8 @@ public class AnnotateOperations {
         IOUtils.copy(resultStream, new FileOutputStream(Utilities.OUTPUT_PATH + File.separator + "cells-annotated.xlsx"));
     }
 
-    public static void addingAnnotationsToWordDocument(String storagePath, String fileName) throws Exception {
-        AnnotationConfig cfg = new AnnotationConfig();
+    public static void addingAnnotationsToWordDocument(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 

@@ -13,10 +13,10 @@ import java.io.File;
  * @author Aleksey Permyakov
  */
 public class CommonOperations {
-    public static void createDocument(String storageFolder, String documentName) {
+    public static void createDocument(AnnotationConfig cfg, String storageFolder, String documentName) {
         Utilities.cleanStorage();
         // Create instance of the annotation handler
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storageFolder);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
         IDocumentDataHandler documentRepository = annotator.getDocumentDataHandler();
@@ -30,10 +30,10 @@ public class CommonOperations {
         System.out.println("Document ID: " + documentId);
     }
 
-    public static void setDocumentAccessRights(String storageFolder, String documentName) {
+    public static void setDocumentAccessRights(AnnotationConfig cfg, String storageFolder, String documentName) {
         Utilities.cleanStorage();
         // Create instance of the annotation handler
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storageFolder);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 

@@ -17,10 +17,10 @@ import java.util.List;
  * @author Aleksey Permyakov (15.09.2016)
  */
 public class DocumentOperations {
-    public static void gettingImageRepresentationOfDocument(String storagePath, String fileName) throws IOException {
+    public static void gettingImageRepresentationOfDocument(AnnotationConfig cfg, String storagePath, String fileName) throws IOException {
         Utilities.cleanStorage();
         InputStream document = new FileInputStream(storagePath + File.separator + fileName);
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
 
         AnnotationImageHandler annotationHandler = new AnnotationImageHandler(cfg);
@@ -33,9 +33,9 @@ public class DocumentOperations {
         IOUtils.copy(pageImage.getStream(), outputStream);
     }
 
-    public static void gettingTextCoordinatesInImagePresentationOfDocument(String storagePath, String fileName) {
+    public static void gettingTextCoordinatesInImagePresentationOfDocument(AnnotationConfig cfg, String storagePath, String fileName) {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
         annotator.createDocument(fileName);

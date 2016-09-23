@@ -14,9 +14,8 @@ import java.io.File;
  * @author Aleksey Permyakov (09.09.2016)
  */
 public class AnnotationOperations {
-    public static void createAndGetAnnotations(String storagePath, String documentName) throws Exception {
+    public static void createAndGetAnnotations(AnnotationConfig cfg, String storagePath, String documentName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -52,9 +51,9 @@ public class AnnotationOperations {
         System.out.println(result);
     }
 
-    public static void gettingAllDocumentAnnotations(String storagePath, String fileName) throws Exception {
+    public static void gettingAllDocumentAnnotations(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -85,9 +84,9 @@ public class AnnotationOperations {
         System.out.println(listAnnotationsResult);
     }
 
-    public static void resizeAndMoveAnnotations(String storagePath, String fileName) throws Exception {
+    public static void resizeAndMoveAnnotations(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
 
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
@@ -145,9 +144,9 @@ public class AnnotationOperations {
         System.out.println(newBGColorAnnotation);
     }
 
-    public static void editTextFieldAnnotation(String storagePath, String fileName) throws Exception {
+    public static void editTextFieldAnnotation(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -187,9 +186,9 @@ public class AnnotationOperations {
         System.out.println(saveTextFieldColorResult);
     }
 
-    public static void removeAnnotations(String storagePath, String fileName) throws Exception {
+    public static void removeAnnotations(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
 
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);

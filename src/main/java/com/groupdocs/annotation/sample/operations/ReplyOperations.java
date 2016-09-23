@@ -17,9 +17,9 @@ import java.io.File;
  * @author Aleksey Permyakov (13.09.2016)
  */
 public class ReplyOperations {
-    public static void processReplies(String storagePath, String fileName) {
+    public static void processReplies(AnnotationConfig cfg, String storagePath, String fileName) {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
 
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);

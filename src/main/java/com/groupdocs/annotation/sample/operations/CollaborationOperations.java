@@ -19,10 +19,10 @@ import java.io.File;
  * @author Aleksey Permyakov (13.09.2016)
  */
 public class CollaborationOperations {
-    public static void processCollaborations(String storagePath, String fileName) {
+    public static void processCollaborations(AnnotationConfig cfg, String storagePath, String fileName) {
         Utilities.cleanStorage();
         // Create instance of the annotation handler
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
 
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
@@ -90,9 +90,9 @@ public class CollaborationOperations {
         System.out.println(deleteCollaboratorResult);
     }
 
-    public static void managingCollaboratorsRights(String storagePath, String fileName) {
+    public static void managingCollaboratorsRights(AnnotationConfig cfg, String storagePath, String fileName) {
         Utilities.cleanStorage();
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -132,9 +132,11 @@ public class CollaborationOperations {
 
         // Add collaboorator to the document. If user with UserName equals to reviewers PrimaryEmail is absent it will be created.
         SetCollaboratorsResult addCollaboratorResult = annotator.addCollaborator(documentId, reviewerInfo);
+        System.out.println(addCollaboratorResult);
 
         // Get document collaborators
         GetCollaboratorsResult getCollaboratorsResult = annotator.getCollaborators(documentId);
+        System.out.println(getCollaboratorsResult);
         User judy = userRepository.getUserByEmail("judy@doe.com");
 
         // Create annotation object

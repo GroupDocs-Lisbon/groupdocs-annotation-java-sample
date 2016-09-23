@@ -15,10 +15,10 @@ import java.util.List;
  * @author Aleksey Permyakov (13.09.2016)
  */
 public class ImportExportOperations {
-    public static void exportAnnotationsToPdf(String storagePath, String fileName) throws Exception {
+    public static void exportAnnotationsToPdf(AnnotationConfig cfg, String storagePath, String fileName) throws Exception {
         Utilities.cleanStorage();
         // Create instance of annotator.
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
@@ -64,10 +64,10 @@ public class ImportExportOperations {
         System.out.println("Document exported!");
     }
 
-    public static void importAnnotationsFromPdf(String storagePath, String fileName) throws FileNotFoundException {
+    public static void importAnnotationsFromPdf(AnnotationConfig cfg, String storagePath, String fileName) throws FileNotFoundException {
         Utilities.cleanStorage();
         // Create instance of annotator.
-        AnnotationConfig cfg = new AnnotationConfig();
+
         cfg.setStoragePath(storagePath);
         AnnotationImageHandler annotator = new AnnotationImageHandler(cfg);
 
