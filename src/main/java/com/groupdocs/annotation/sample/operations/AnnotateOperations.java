@@ -494,7 +494,7 @@ public class AnnotateOperations {
         distanceAnnotation.setPenStyle((byte) 0);
         distanceAnnotation.setPenWidth((byte) 1);
         distanceAnnotation.setSvgPath("M248.73201877934272,295.5439436619718 l115.28309859154929,-4.192112676056338");
-        distanceAnnotation.setText("\r\nAnonym A.: 115px");
+        distanceAnnotation.setFieldText("\r\nAnonym A.: 115px");
         distanceAnnotation.setType(AnnotationType.Distance);
         distanceAnnotation.setCreatorName("Anonym A.");
 
