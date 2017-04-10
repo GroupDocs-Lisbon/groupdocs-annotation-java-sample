@@ -595,7 +595,7 @@ public class AnnotateOperations {
         textReplacementAnnotation.setFieldText(" \"REPLACED TEXT\" ");
         textReplacementAnnotation.setFontSize(10);
         textReplacementAnnotation.setSvgPath("[{\"x\":251.224,\"y\":637.20401},{\"x\":327.89,\"y\":637.20401},{\"x\":251.224,\"y\":628.20401},{\"x\":327.89,\"y\":628.20401}]");
-        textReplacementAnnotation.setPageNumber(1);
+        textReplacementAnnotation.setPageNumber(0);
         textReplacementAnnotation.setType(AnnotationType.TextReplacement);
 
         AnnotationInfo arrowAnnotation = new AnnotationInfo();
