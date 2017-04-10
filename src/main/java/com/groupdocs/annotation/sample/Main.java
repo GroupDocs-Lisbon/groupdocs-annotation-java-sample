@@ -64,7 +64,7 @@ public class Main {
         AnnotateOperations.creatingUnderlineAnnotation(cfg, Utilities.STORAGE_PATH, "source.pdf");
         AnnotateOperations.creatingDistanceAnnotation(cfg, Utilities.STORAGE_PATH, "source.pdf");
         AnnotateOperations.addingAnnotationsToCellsDocument(cfg, Utilities.STORAGE_PATH, "source.xlsx");
-        AnnotateOperations.addingAnnotationsToSlidesDocument(cfg, Utilities.STORAGE_PATH, "source.pptx");
+        //AnnotateOperations.addingAnnotationsToSlidesDocument(cfg, Utilities.STORAGE_PATH, "source.pptx"); //Removed from 17.1.0
         AnnotateOperations.addingAnnotationsToWordDocument(cfg, Utilities.STORAGE_PATH, "source.docx");
     }
 }
